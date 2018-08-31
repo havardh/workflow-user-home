@@ -18,7 +18,7 @@ export default render(
       <Terminal 
         percent={0.1} 
         cwd={"~/dev/workflow/packages/workflow-web/"} 
-        cmd={"yarn start"}
+        cmd={"echo 'yarn start'"}
       />
     </SplitV>
   </Workspace>,
