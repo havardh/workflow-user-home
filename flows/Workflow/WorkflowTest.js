@@ -1,10 +1,10 @@
 /* eslint-env node */
 
 import React from 'react';
-import render, { Workspace, Layouts, Apps } from 'workflow-react';
+import render, { Workspace, requireComponent } from 'workflow-react';
 
-const { SplitV, SplitH } = Layouts;
-const { TextEditor, Terminal } = Apps.defaults;
+const { SplitV, SplitH } = requireComponent("workflow-layout-tiled");
+const { TextEditor, Terminal } = requireComponent("workflow-apps-defaults");
 
 function source(path) {
   if (path.includes("src")) {

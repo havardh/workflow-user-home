@@ -1,11 +1,10 @@
 /* eslint-env node */
 
 import React from 'react';
-import render, { Workspace, Layouts, Apps } from 'workflow-react';
+import render, { Workspace, requireComponent } from 'workflow-react';
 
-const { SplitV } = Layouts;
-const { TextEditor, Browser } = Apps.defaults;
-const { Atom } = Apps.linux;
+const { SplitV } = requireComponent("workflow-layout-tiled");
+const { Browser } = requireComponent("workflow-apps-defaults");
 
 export default render(
   <Workspace name={'workflow-ci'}>

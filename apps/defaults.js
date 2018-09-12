@@ -11,3 +11,8 @@ export default {
   Browser: Chrome,
 };
 */
+/*
+export default {
+  TextEditor: require("workflow-app-code")
+};
+*/
