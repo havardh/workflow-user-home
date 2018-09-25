@@ -1,11 +1,13 @@
 const { join } = require("path");
-const WorkflowResolverRelative = require("workflow-resolver-relative");
-const WorkflowResolverAbsolute = require("workflow-resolver-absolute");
-const WorkflowLoaderBabel = require("workflow-loader-babel");
-const WorkflowParserArguments = require("workflow-parser-arguments");
-const WorkflowTransformerApplyArgumentsToFields = require("workflow-transformer-apply-arguments-to-fields");
-const WorkflowLayout = require("workflow-layout");
-const WorkflowWmI3 = require("workflow-wm-i3");
+const { WorkflowResolverRelative } = require("workflow-resolver-relative");
+const { WorkflowResolverAbsolute } = require("workflow-resolver-absolute");
+const { WorkflowLoaderBabel } = require("workflow-loader-babel");
+const { WorkflowParserArguments } = require("workflow-parser-arguments");
+const {
+  WorkflowTransformerApplyArgumentsToFields
+} = require("workflow-transformer-apply-arguments-to-fields");
+const { WorkflowLayout } = require("workflow-layout");
+const { WorkflowWmI3 } = require("workflow-wm-i3");
 
 const config = {
   presets: [

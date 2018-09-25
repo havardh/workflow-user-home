@@ -1,12 +1,11 @@
 /* eslint-env node */
 
-import React from 'react';
-import render, { Workspace, Layouts, Apps } from 'workflow-react';
+import React from "react";
+import { render, Workspace, requireComponent } from "workflow-react";
 
-const { SplitV } = Layouts;
-const { Emacs } = Apps.linux;
-const { Terminal } = Apps.defaults;
-
+const { SplitV } = requireComponent("workflow-layout-tiled");
+const { Emacs } = requireComponent("workflow-app-emacs");
+const { Terminal } = requireComponent("workflow-apps-defaults");
 
 /*
   NB this workflow requires the library workflow-react
@@ -15,11 +14,11 @@ const { Terminal } = Apps.defaults;
 
 // Docs: https://github.com/havardh/workflow/blob/master/packages/workflow-react/Readme.md
 
-export default render(
-  <Workspace name={'bin'}>
+export const flow = render(
+  <Workspace name={"bin"}>
     <SplitV percent={1}>
       <Emacs percent={0.8} file={"~/bin"} />
       <Terminal percent={0.2} cwd={"~/bin"} />
     </SplitV>
-  </Workspace>,
+  </Workspace>
 );
