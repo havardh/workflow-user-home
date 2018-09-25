@@ -42,7 +42,7 @@
     "shelljs": "^0.8.2",
     "workflow-app-emacs": "^2.0.0",
     "workflow-app-slack": "^2.0.0",
-    "workflow-app-terminal": "^2.0.0",
+    "workflow-app-terminal": "1.0.0",
     "workflow-apps-defaults": "2.0.0",
     "workflow-core": "2.0.0",
     "workflow-layout": "2.0.0",
