@@ -1,22 +1,22 @@
 /* eslint-env node */
 
 import React from 'react';
-import render, { Workspace, Layouts, Apps } from 'workflow-react';
+import {render, Workspace, requireComponent } from 'workflow-react';
 
-const { SplitV, SplitH } = Layouts;
-const { TextEditor, Terminal } = Apps.defaults;
+const { SplitV, SplitH } = requireComponent("workflow-layout-tiled");
+const { TextEditor, Terminal } = requireComponent("workflow-apps-defaults");
 
 import tmp from "tmp";
 
 const {name} = tmp.dirSync({keep: true});
 
-export default render(
+export const flow = render(
   <Workspace name={'tmp-script'}>
     <SplitV percent={1}>
       <TextEditor percent={0.3} file={name} />
-      <Terminal 
-        percent={0.3} 
-        cwd={name} 
+      <Terminal
+        percent={0.3}
+        cwd={name}
       />
     </SplitV>
   </Workspace>,
